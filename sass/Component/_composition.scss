@@ -1,0 +1,102 @@
+.composition{
+    width: 33.33%;
+   position: relative;
+
+   @include respond (iPhone-se){
+     display: none;
+   }
+
+   @include respond (moto-g4){
+    display: none; 
+   }
+
+   @include respond (iPhone){
+     display: none;
+   }
+
+   @include respond (pixel-2){
+     display: none;
+   }
+
+   @include respond (iPhone-plus){
+    display: none; 
+   }
+
+   @include respond (phone){
+    margin: 0 auto;
+    width: 52%;
+    padding: 13rem;
+    left: 7rem;
+    top: 11rem;
+   }
+
+   @include respond (tab-port){
+   margin: 0 auto; 
+   width: 32%;
+   padding: 13rem;
+   left: -3rem;
+   top: 6rem;
+   }
+
+   @include respond (tab-land){
+   width: 50%;  
+   
+   }
+
+    &__photo{
+       width: 55%;
+       box-shadow: 0 1.5rem 4rem rgba($color-black, .4);
+       border-radius: 2px;
+       position: absolute;
+       transition: all .2s;
+       outline-offset: 2rem;
+
+       @include respond (tab-port){
+       width: 75%;  
+       }
+
+       
+
+    &--p1{
+    top: -2rem;
+    left: 0;
+    @include respond (phone){left: -13rem; transform: scale(1.2);}
+    @include respond (tab-port){left: -13rem; transform: scale(1.2);} 
+
+    }
+
+    &--p2{
+    top: 2rem;
+    right: 0rem;
+    
+    @include respond (phone){top: -3rem; left: .8rem; transform:scale(1.3); z-index: 100;}
+    @include respond (tab-port){top:-3rem; right:0rem; transform: scale(1.3); z-index: 100;}
+    }
+    
+
+    &--p3{  
+    top: 10rem;
+    left: 20%;
+    
+    @include respond (phone){top: -2rem; left: 19rem; transform: scale(1.2);}
+    @include respond (tab-port){top:-2rem; left: 25rem; transform: scale(1.2);}
+   }
+
+    &:hover{
+      transform: scale(1.05) translateY(-.5rem);
+      box-shadow: 0 2.5rem 4rem rgba($color-black, .5);
+      z-index: 20;
+      outline: 1.5rem solid $color-primary;
+
+      @include respond (phone){transform: scale(1.2) translateY(-.5rem); z-index: 150; outline: 1.2rem solid $color-primary;}
+    }
+
+
+  }
+
+  &:hover &__photo:not(:hover){
+    transform: scale(.95);
+  }
+
+  
+}

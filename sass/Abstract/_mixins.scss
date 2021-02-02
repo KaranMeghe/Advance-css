@@ -1,0 +1,89 @@
+//The @mixin directive lets you create CSS code that is to be reused throughout the website.
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// MEDIA QUERY MANNEGER
+/*
+ 599px             phone
+ 320px             i-phone-se
+321px - 360px      moto g4
+361px - 375px      iPhone6/7/8
+376px - 411px      pixel 2
+412px - 414px      iPhone6/7/8plus
+
+600px - 899px      tablet portrait
+900px - 1200px     tablet landscape
+1800px+            big monitor 
+
+
+/*
+Breakpoint argument choices
+-phone
+-i-phone-se
+-moto-g4
+-iPhone-6-7-8
+-i-phone-plus
+-pixel-2
+-tab-port
+-i-phone-se
+-moto-g4
+-i-phone-se
+-moto-g4
+-tab-land
+-big-desktop
+*/
+
+//The @mixin directive lets you create CSS code that is to be reused throughout the website.
+// name of @mixin = respond , ($breakpoint) is variable which is argument.
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == iPhone-se {
+    @media (max-width: 20em) { @content };                               //320px 320/16= 20em
+  }
+
+  @if $breakpoint == moto-g4 {
+    @media (min-width: 20.0625em) and (max-width: 22.5em) { @content };  //min-width:321px and max-width:360px
+  }
+
+  @if $breakpoint == iPhone {
+    @media (min-width: 22.5625em) and (max-width: 23.4375em) { @content }; // min-width=361px max-width=375px
+  }
+
+  @if $breakpoint == pixel-2 {
+    @media (min-width: 23.5em) and (max-width: 25.6875em) { @content };   //min-width=376px max-width=411px
+  }
+
+  @if $breakpoint == iPhone-plus {
+    @media (min-width: 25.75em) and (max-width: 25.875em) { @content };    //min-width=412px max-width=414px
+  }
+
+  @if $breakpoint == phone {
+    @media (min-width: 25.9375em) and (max-width: 37.4375em) { @content };  //min-width=415px max-width=599px
+  }
+
+  @if $breakpoint == tab-port {
+    @media (min-width: 37.5em) and (max-width: 56.25em) { @content };    //min-width=600px max-width=900px
+  }
+
+  @if $breakpoint == tab-land {
+    @media (min-width: 56.3125em) and (max-width: 75em) { @content };   //min-width=901px max-width=1200px
+  }
+
+  @if $breakpoint == hd-tel {
+    @media (min-width: 75.0625em) and (max-width: 80em) { @content};   //min width= 1201px and max width:1280
+  }
+  
+  @if $breakpoint == fhd-tel{
+   @media (min-width: 120em) { @content};                           //min-width= 1920px
+  }
+  
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 240em) { @content };                        //min-width= 3840px
+  }
+}
+

@@ -1,0 +1,680 @@
+.card{
+    perspective: 150rem;
+    height: 64vh;
+    position: relative;
+    
+    &__side{
+        height: 64vh;
+        width: 34rem;
+        transition: all .8s ease;
+        backface-visibility: hidden;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        border-radius: .3rem;
+        overflow-x: hidden;
+        
+        
+          
+        &--front{
+            background-color: $color-white;
+            
+        }
+
+        &--back{
+            transform: rotateY(180deg);
+            position: absolute;     
+            top: 0;
+            left: 0;
+
+            
+             &-1{
+                background-image:linear-gradient(to right bottom, $color-secondary,$color-secondary-dark);
+            }
+
+             &-2{
+                 background-image:linear-gradient(to right bottom, $color-primary,$color-primary-dark);
+             }
+
+             &-3{
+                background-image:linear-gradient(to right bottom, $color-tertiary,$color-tertiary-dark);
+            }
+        }
+
+        @include respond (hd-tel){
+            height: 75vh;    
+
+        }
+
+        @include respond (fhd-tel){
+           height: 64vh; 
+        }
+
+        @include respond (big-desktop){
+            height: 38vh;
+            margin-bottom: -10rem;
+        }
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(-180deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    &__picture{
+     background-size: cover;
+     height: 23rem;
+     background-blend-mode: screen;
+     clip-path:  polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+        &--1{
+            background-image: linear-gradient(to right bottom, $color-secondary,$color-secondary-dark), url(../img/nat-5.jpg);
+           
+        }
+
+        &--2{
+           background-image:linear-gradient(to right bottom, $color-primary,$color-primary-dark), url(../img/nat-6.jpg);
+        }
+
+        &--3{
+           background-image:linear-gradient(to right bottom, $color-tertiary,$color-tertiary-dark), url(../img/nat-7.jpg);
+        }
+    }
+
+    &__heading{
+        font-size: 2.5rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: $color-white;
+        position: absolute;
+        top: 12rem;
+        right: 2rem;
+        text-align: right;
+        width: 65%;
+    }
+
+    &__heading-span{
+     padding: 1rem 1.5rem;
+     box-decoration-break: clone;
+     -webkit-box-decoration-break: clone;
+        &--1{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-secondary, .85), 
+            rgba($color-secondary-dark, .85));
+        }
+
+        &--2{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-primary, .85), 
+            rgba($color-primary-dark, .85));
+        }
+
+        &--3{
+            background-image: linear-gradient(to right bottom, 
+            rgba($color-tertiary, .85), 
+            rgba($color-tertiary-dark, .85));
+        }
+    }
+
+    &__details{
+        padding: 2rem;
+        ul{
+        list-style: none;
+        width: 80%;
+        margin: 0 auto;
+        }
+        
+        li{
+         text-align: center;
+         font-size: 1.5rem;
+         padding: 1rem;
+
+        &:not(:last-child){
+            border-bottom: .1rem solid #eee;
+        }
+        }
+    }
+
+    // car back side
+
+    &__cta{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        color: $color-white;
+        width: 90%;
+        text-align: center;
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 8rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+        font-size: 6rem;
+        font-weight: 100;
+    }
+
+    //iphone-se
+    @include respond (iPhone-se){
+        
+        height: auto;
+        margin-bottom: 10rem;
+        border-radius: 3rem;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    
+       
+        &__side{
+            height: auto;
+            width: 50rem;
+            box-shadow: none;
+        
+    
+            &--back{
+                transform: rotateY(0);
+                position: relative;     
+                top: 0;
+                left: 0;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+    
+       }
+    
+        &:hover &__side--front{
+        transform: rotateY(0deg);
+        }
+    
+        &:hover &__side--back{
+            transform: rotateY(0deg);
+        }
+    
+        
+    
+    
+        // car back side
+    
+        &__cta{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem
+        }
+    
+        &__price-box{
+         text-align: center;
+         margin-bottom: 3rem;
+        }
+    
+        &__price-only{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        }
+    
+        &__price-value{
+        font-size: 6rem;
+        font-weight: 300;
+        }    
+    }
+   //moto-g4
+   @include respond (moto-g4){
+        
+    height: auto;
+    margin-bottom: 10rem;
+    border-radius: 3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+   
+    &__side{
+        height: auto;
+        width: 50rem;
+        box-shadow: none;
+    
+
+        &--back{
+            transform: rotateY(0);
+            position: relative;     
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+
+
+    // car back side
+
+    &__cta{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 3rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+    font-size: 6rem;
+    font-weight: 300;
+    }    
+}
+
+   //pixel-2
+   @include respond (pixel-2){
+        
+    height: auto;
+    margin-bottom: 10rem;
+    border-radius: 3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+   
+    &__side{
+        height: auto;
+        width: 50rem;
+        box-shadow: none;
+    
+
+        &--back{
+            transform: rotateY(0);
+            position: relative;     
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+
+
+    // car back side
+
+    &__cta{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 3rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+    font-size: 6rem;
+    font-weight: 300;
+    }    
+}
+
+   //iphone
+   @include respond (iPhone){
+        
+    height: auto;
+    margin-bottom: 10rem;
+    border-radius: 3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+   
+    &__side{
+        height: auto;
+        width: 50rem;
+        box-shadow: none;
+    
+
+        &--back{
+            transform: rotateY(0);
+            position: relative;     
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+
+
+    // car back side
+
+    &__cta{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 3rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+    font-size: 6rem;
+    font-weight: 300;
+    }    
+}
+    
+
+   //iphome-plus
+   @include respond (iPhone-plus){
+        
+    height: auto;
+    margin-bottom: 10rem;
+    border-radius: 3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+   
+    &__side{
+        height: auto;
+        width: 50rem;
+        box-shadow: none;
+    
+
+        &--back{
+            transform: rotateY(0);
+            position: relative;     
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+
+
+    // car back side
+
+    &__cta{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 3rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+    font-size: 6rem;
+    font-weight: 300;
+    }    
+}
+
+   //phone
+   
+   @include respond (phone){
+        
+    height: auto;
+    margin-bottom: 10rem;
+    border-radius: 3rem;
+    background-color: $color-white;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+   
+    &__side{
+        height: auto;
+        width: 50rem;
+        box-shadow: none;
+    
+
+        &--back{
+            transform: rotateY(0);
+            position: relative;     
+            top: 0;
+            left: 0;
+            clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+        }
+
+   }
+
+    &:hover &__side--front{
+    transform: rotateY(0deg);
+    }
+
+    &:hover &__side--back{
+        transform: rotateY(0deg);
+    }
+
+    
+
+
+    // car back side
+
+    &__cta{
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: translate(0);
+        width: 100%;
+        padding: 7rem 4rem 4rem 4rem
+    }
+
+    &__price-box{
+     text-align: center;
+     margin-bottom: 3rem;
+    }
+
+    &__price-only{
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    }
+
+    &__price-value{
+    font-size: 8rem;
+    font-weight: 100;
+    }    
+}
+
+   //tab-port
+    @include respond (tab-port){
+        
+            height: auto;
+            margin-bottom: 10rem;
+            border-radius: 3rem;
+            background-color: $color-white;
+            box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+
+           
+            &__side{
+                height: auto;
+                width: 50rem;
+                box-shadow: none;
+            
+        
+                &--back{
+                    transform: rotateY(0);
+                    position: relative;     
+                    top: 0;
+                    left: 0;
+                    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+                }
+        
+           }
+        
+            &:hover &__side--front{
+            transform: rotateY(0deg);
+            }
+        
+            &:hover &__side--back{
+                transform: rotateY(0deg);
+            }
+        
+            
+        
+        
+            // car back side
+        
+            &__cta{
+                position: relative;
+                top: 0;
+                left: 0;
+                transform: translate(0);
+                width: 100%;
+                padding: 7rem 4rem 4rem 4rem
+            }
+        
+            &__price-box{
+             text-align: center;
+             margin-bottom: 3rem;
+            }
+        
+            &__price-only{
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            }
+        
+            &__price-value{
+            font-size: 8rem;
+            font-weight: 100;
+            }    
+    }
+    //tab land 
+    @include respond (tab-land){
+        
+        height: auto;
+        margin-bottom: 10rem;
+        border-radius: 3rem;
+        background-color: $color-white;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        
+       
+        &__side{
+            height: auto;
+            width: 50rem;
+            box-shadow: none;
+        
+    
+            &--back{
+                transform: rotateY(0);
+                position: relative;     
+                top: 0;
+                left: 0;
+                clip-path: polygon(0 15%, 100% 0, 100% 100%, 0% 100%);
+            }
+    
+       }
+    
+        &:hover &__side--front{
+        transform: rotateY(0deg);
+        }
+    
+        &:hover &__side--back{
+            transform: rotateY(0deg);
+        }
+    
+        
+    
+    
+        // car back side
+    
+        &__cta{
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            width: 100%;
+            padding: 7rem 4rem 4rem 4rem
+        }
+    
+        &__price-box{
+         text-align: center;
+         margin-bottom: 3rem;
+        }
+    
+        &__price-only{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        }
+    
+        &__price-value{
+        font-size: 8rem;
+        font-weight: 100;
+        }    
+}
+
+}
+ 
+

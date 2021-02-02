@@ -1,0 +1,125 @@
+.header{
+    height: 95vh;
+    background: linear-gradient(to right bottom, rgba($color-primary-light,0.8), rgba($color-primary-dark,0.8)), url(../img/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+    
+    @include respond (iPhone-se){ clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    @include respond (moto-g4){ clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+    @include respond (pixel-2){ clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    @include respond (iPhone){ clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%); }
+    @include respond (iPhone-plus){ clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    @include respond (phone){ clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+    @include respond (tab-port){ clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%); }
+
+
+
+
+
+
+    &__logo-box{
+        top: 4rem;
+        left: 4rem;
+        position: absolute;
+
+
+        @include respond (iPhone-se){
+        top: 6.5rem;    
+        left: 5rem;
+        position: absolute;
+        }
+
+        @include respond (moto-g4){
+        top: 6.5rem;    
+        left: 5rem;
+        position: absolute;
+        }
+
+        @include respond (iPhone){
+        top: 6.5rem;    
+        left: 5rem;
+        }
+
+        @include respond (phone){
+        top: 6.5rem;    
+        }
+    }
+
+    &__logo{
+        height: 3.5rem;
+
+        @include respond (iPhone-se){
+            height: 5.5rem;
+        }
+
+        @include respond (moto-g4){
+        height: 5.8rem;    
+        }
+
+        @include respond (iPhone){
+        height: 6rem;    
+        }
+
+        @include respond (iPhone-plus){
+        height: 4rem;    
+        }
+
+        @include respond (phone){
+        height: 5rem;    
+        }
+
+        @include  respond (tab-land){
+        height: 5rem;    
+        }
+    }
+    
+    
+    
+    &__text-box{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 78%;
+        align-items: center;
+
+        @include respond (iPhone-se){
+        text-align: center;
+        height: 90%;
+        }
+
+        @include respond (moto-g4){
+        text-align: center;    
+        height: 95%;
+        }
+
+        @include respond (iPhone){
+        text-align: center;    
+        height:95%
+        }
+
+        @include respond (pixel-2){
+        text-align: center;    
+        height: 95%;
+        }
+
+        @include respond (iPhone-plus){
+        text-align: center;    
+        height: 95%;
+        }
+
+        @include respond (phone){
+        text-align: center;    
+        height: 95%;
+        }
+
+        @include respond (tab-port){
+        text-align: center;    
+        }
+
+    }
+    
+}
+

@@ -1,0 +1,161 @@
+.footer{
+    background: $color-dark;
+    padding: 10rem 0;
+    font-size: 1.4rem;
+    color: #f7f7f7;
+    font-family: inherit;
+   
+    &__logo-box{
+    text-align: center;
+    margin-bottom: 6rem;
+       
+    }
+
+    &__logo{
+
+    }
+
+    &__navigation{  
+    border-top: 1px solid $color-grey-1;
+    padding-top: 3rem;
+
+    @include respond (iPhone-se){
+    width: 100%;  
+    text-align: center;  
+    align-items: center;
+    }
+
+    @include respond (phone){
+    padding-top: .5rem ;    
+    }
+    @include respond (tab-port){
+        padding-top: 1rem;
+    }
+
+    @include respond (tab-land){
+        padding-top: 1rem;
+    }
+    }
+    &__list{
+        list-style: none;
+        display: flex;   
+
+        @include respond (iPhone-se){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            padding: 1rem;
+        }
+
+        @include respond (moto-g4){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            padding: 1rem;
+        }
+
+        @include respond (pixel-2){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            padding: 1rem;
+        }
+
+        @include respond (iPhone){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            padding: 1rem;
+        }
+
+        @include respond (iPhone-plus){
+            display: flex;
+            flex-wrap: wrap;
+            justify-content:space-evenly;
+            padding: 1rem;
+        }
+    }  
+
+    &__item{
+        padding: .8rem;
+    }
+    &__link{
+     &:link,
+     &:visited {
+        color: #f7f7f7;
+        text-decoration: none;
+        font-size:1.6rem;
+        text-transform: uppercase;
+        display: inline-block;
+        transition:all .2s;
+        background-color: $color-dark;
+     }
+    
+    
+    &:hover,
+    &:active{
+        color: $color-primary;
+        box-shadow: 0 1rem 2rem rgba($color-black,.4);
+        transform: rotate(5deg) scale(1.3);
+    }
+
+    }
+
+    &__copyright{
+        width: 25.33%;
+        border-top: 1px solid $color-grey-1;
+        padding-top: 3rem;
+
+        @include respond (iPhone-se){
+            width: 80%;
+            padding: 1rem;
+            text-align: -webkit-match-parent; 
+            letter-spacing: .2rem;
+        }
+
+        @include respond (moto-g4){
+            width: 80%;
+            padding: 1rem;
+            text-align: -webkit-match-parent; 
+            letter-spacing: .2rem;
+        }
+
+        @include respond (pixel-2){
+            width: 80%;
+            padding: 1rem;
+            text-align: -webkit-match-parent; 
+            letter-spacing: .2rem;
+        }
+         
+        @include respond (iPhone){
+            width: 80%;
+            padding: 1rem;
+            text-align: -webkit-match-parent; 
+            letter-spacing: .2rem;
+        }
+
+        @include respond (iPhone-plus){
+            width: 80%;
+            padding: 1rem;
+            text-align: -webkit-match-parent; 
+            letter-spacing: .2rem;
+        }
+
+        @include respond (phone){
+        width: 75%;    
+        font-size: 1.8rem;
+        }
+
+        @include respond (tab-port){
+        width: 50%;    
+        font-size: 1.8rem;
+        }
+
+        @include respond (tab-land){
+           width: 50%; 
+           font-size: 1.8rem;
+        }
+    }
+
+    
+}

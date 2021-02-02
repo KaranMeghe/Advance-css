@@ -1,0 +1,129 @@
+.feature-box{
+    width: 21%;
+    background: rgba($color-white, .8);
+    height: 42vh;
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    border-radius: .3rem;
+    text-align: center;
+    transition: transform .3s;
+
+    @include respond (iPhone-se){
+    width: 75vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    }
+
+    @include respond (moto-g4){
+    width: 80vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    font-size: 2rem;
+    text-align: center;
+    }
+
+    @include respond (iPhone){
+    width: 80vw;
+    height: 100%;    
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    @include respond (pixel-2){
+    width: 80vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    @include respond (iPhone-plus){
+    width: 80vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    @include respond (phone){
+    width: 70vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    @include respond (tab-port){
+    width: 65vw;    
+    height: 100%;
+    padding: 2rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2rem;
+    }
+
+    @include respond (tab-land){
+    width: 65vw;    
+    height: 100%;
+    padding: 2.5rem;
+    margin-bottom: 5rem;
+    text-align: center;
+    font-size: 2.1rem;
+    }
+
+
+    @include respond (hd-tel) {
+        width: 23%;
+        height: 68vh;
+        padding: 2.5rem;
+        font-size: 1.5rem;
+        
+            
+    }
+
+    @include respond (fhd-tel){
+     font-size: 1.8rem;   
+     height:51vh;
+    }
+
+    @include respond (big-desktop){
+    height: 30vh;    
+    }
+
+    &__icon{
+    font-size: 8rem;
+    margin-bottom: .5rem;
+    background: linear-gradient(to right, $color-primary-light ,$color-primary-dark);
+    -webkit-background-clip: text;
+     color: transparent; 
+
+
+     @include respond (iPhone-se){
+         font-size: 15rem;
+     }
+
+     @include respond (moto-g4){
+     font-size: 15rem;    
+     }
+
+     @include respond (iPhone){
+     font-size: 15rem;    
+     }
+    }
+
+    
+    &:hover{
+    transform: translateY(-1.5rem) scale(1.03);
+    }
+    
+}

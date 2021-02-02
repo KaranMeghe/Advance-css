@@ -1,0 +1,158 @@
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+  
+// Media query-order
+//Base+typography>genral-layout+flex > page-layout + components
+
+html{
+  font-size: 62.5%;                        //this define what 1rem is. its 10px , 10/16 = 62.5%; 
+
+  
+  @include respond (iPhone-se){           //The @include directive is created to let you use (include) the mixin.
+    font-size: 25%;                       // its 4px , 4/16 = 25%;
+  }
+  
+   @include respond(moto-g4){
+     font-size: 25%;
+   }
+
+  @include respond(iPhone){
+    font-size: 25%;
+  }
+
+  @include respond(pixel-2){
+   font-size: 45%; 
+  }
+
+  @include respond (iPhone-plus){
+    font-size: 45%;
+  }
+
+  @include respond (phone){
+  font-size: 40%;  
+  }
+
+  @include respond (tab-port){
+    font-size: 65%; 
+   }
+
+  @include respond (tab-land){
+  font-size: 75%;  
+  }
+  
+  @include respond (hd-tel){
+    font-size: 70%;
+  }
+
+  @include respond (fhd-tel){
+    font-size: 75%;
+  }
+
+
+  @include respond (big-desktop){
+  font-size: 100%;  
+  }
+ 
+
+
+}
+
+html,body{
+  @include respond (iPhone-se){
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  @include respond (moto-g4){
+    width:  100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  @include respond (iPhone){
+  width: 100%;  
+  height: 100%;
+  overflow-x: hidden;
+  }
+
+  @include respond (pixel-2){
+   width: 100%; 
+   height: 100%;
+   overflow-x: hidden;
+  }
+
+  @include respond (iPhone-plus){
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+  }
+
+  @include respond (phone){
+  width: 100%;  
+  height: 100%;
+  overflow-x: hidden;
+  }
+  
+  @include respond (tab-port){
+  width: 100%; 
+  height: 100%;
+  overflow-x: hidden;
+  }
+
+  @include respond (tab-land){
+   overflow-x: hidden; 
+  }
+}
+
+
+body{
+  box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond (iPhone-se){
+    padding: 0;
+}
+
+ @include respond (moto-g4){
+ padding:0rem;  
+ }
+
+ @include respond (iPhone){
+ padding: 0;  
+ }
+
+ @include respond (pixel-2){
+  padding: 0; 
+ }
+
+ @include respond (iPhone-plus){
+   padding: 0;
+ }
+
+ @include respond (iPhone-plus){
+   padding: 0;
+ }
+
+ @include respond (phone){
+ padding: 0;  
+ }
+
+ @include respond (tab-port){
+ padding: 0;
+ }
+ 
+ ::-moz-selection {
+  background-color: $color-primary;
+  color: $color-white;
+}
+
+ ::selection{
+   background-color: $color-primary;
+   color: $color-white;
+ }
+}
+
