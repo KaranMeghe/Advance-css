@@ -1,10 +1,10 @@
 .card{
     perspective: 150rem;
-    height: 64vh;
+    // height: 64vh;
     position: relative;
     
     &__side{
-        height: 64vh;
+        height: 53rem;
         width: 34rem;
         transition: all .8s ease;
         backface-visibility: hidden;

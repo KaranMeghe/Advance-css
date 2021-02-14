@@ -747,12 +747,11 @@ body {
 .card {
   -webkit-perspective: 150rem;
           perspective: 150rem;
-  height: 64vh;
   position: relative;
 }
 
 .card__side {
-  height: 64vh;
+  height: 53rem;
   width: 34rem;
   -webkit-transition: all .8s ease;
   -o-transition: all .8s ease;
@@ -1584,7 +1583,7 @@ body {
 .feature-box {
   width: 21%;
   background: rgba(255, 255, 255, 0.8);
-  height: 42vh;
+  height: 35rem;
   padding: 2.5rem;
   font-size: 1.5rem;
   -webkit-box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
@@ -3910,7 +3909,7 @@ body {
   background: -webkit-linear-gradient(345deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background: -o-linear-gradient(345deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
   background: linear-gradient(105deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.9) 50%, transparent 50%), url(../img/nat-10.jpg);
-  height: 60vh;
+  height: 50rem;
   width: 75%;
   -webkit-background-size: cover;
           background-size: cover;
